@@ -1,4 +1,14 @@
 /* Geral */
+
+/* Declarando variaveis para definir elementos padrão, sem tr que digitar muito */
+:root{
+    --main-color: #d92123;
+    --primary-text-color:#FFF;
+    --secondary-color: #191919;
+    --tertiary-color: #eff3f4;
+
+}
+
 *{
     /* Zerar configurações dos navegadores */
     font-family: "Lato";
@@ -6,3 +16,118 @@
     margin: 0;
 
 }
+
+a {
+    text-decoration: none;
+}
+/* 100% em relação ao elemento pai */
+img{
+    width: 100%;
+}
+input[type="submit"]{
+    cursor: pointer;
+}
+
+i{
+    background-color: var(--main-color);
+    color: var(--primary-text-color);
+    /* rem é referente ao elemento rute do html, o padrão do html é 16px, então 16 * 2.5 */
+    font-size: 2.5rem;
+    /* padding trabalha com espaçamento interno */
+    padding: 2rem;
+}
+
+/* Cabeçalho e banner  */
+#header{
+    /* vh é referente a altura da tela - view height */
+    min-height: 90vh;
+    background-image: url("../img/main_banner4.png");
+    /* cover faz com que o tamanho da imagem seja otimizado para a area que tenha disposição dela */
+    background-size: cover;
+    background-position: center;
+    color: var(--primary-text-color);
+    margin-bottom: 2rem;
+    /* relative: elementos dentro dele com a posição absoluta - area que controla o absoluto*/
+    position: relative;
+}
+
+#inner-header{
+    /*ativa recurso chamado flex box - movimenta o elemento de uma forma mais simples */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#brand{
+    background-color: var(--main-color);
+    padding: 1rem;
+}
+
+#navbar{
+    display: flex;
+    /* espaçamento igual entre os itens */
+    gap: 4rem;
+    /* deixa o texto em caixa alta */
+    text-transform: uppercase ;
+    margin-right: 2rem;
+}
+#navbar a{
+    color: var(--primary-text-color);
+    /* fonte em negrito */
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.banner.active{
+    opacity: 1;
+
+} 
+.banner{
+    max-width: 50%;
+    padding: 4rem;
+    opacity: 0;
+    position: absolute;
+    transition: 0.6s;
+}
+
+.banner h2{
+    font-size: 4rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.banner p {
+    font-size: 1.5rem;
+}
+/* span segue inline */
+.square{
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-color: var(--main-color);
+    position: absolute;
+    /* z-index define que vai ficar na frente de quem  e pra usar z-index precisa de posicao definida*/
+    z-index: 1;
+    left: 20px;
+    top: 40px;
+}
+
+.dots{
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+}
+
+.dot{
+    width: 20px;
+    height: 20px;
+    background-color:  var(--secondary-color);
+
+}
+.dot.active{
+    background-color: var(--main-color);
+}
+
+
