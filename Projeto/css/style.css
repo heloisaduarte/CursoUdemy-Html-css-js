@@ -3,10 +3,11 @@
 /* Declarando variaveis para definir elementos padrão, sem tr que digitar muito */
 :root{
     --main-color: #d92123;
-    --primary-text-color:#FFF;
-    --secondary-color: #191919;
+    --primary-text-color: #fff;
+    --secondary-text-color: #191919;
+    --secondary-color: #868686;
     --tertiary-color: #eff3f4;
-
+    --secondary-bg-color: #5c1011;
 }
 
 *{
@@ -14,6 +15,7 @@
     font-family: "Lato";
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 
 }
 
@@ -74,7 +76,6 @@ i{
     color: var(--primary-text-color);
     /* fonte em negrito */
     font-weight: bold;
-    padding: 1rem;
 }
 
 .banner.active{
@@ -210,3 +211,91 @@ i{
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
+
+/* Sobre nós */
+/* Começando pela div pai */
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  #about-text {
+    background-image: url("../img/pattern.png");
+    background-size: cover;
+    background-position: center;
+    color: var(--primary-text-color);
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 3rem;
+  }
+  
+  #about-text .section-subtitle,
+  #about-text .section-title {
+    color: var(--primary-text-color);
+  }
+  
+  #about-text i {
+    background-color: transparent;
+  }
+  
+  .about-description {
+    display: flex;
+    align-items: center;
+  }
+  
+  .about-description h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  #about-data {
+    flex: 1 1 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+  
+  #about-data .data {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: -1px;
+    margin-left: -1px;
+  }
+  
+  /* Define o primeiro elemento do grupo */
+  #about-data .data:first-child {
+    /* largura da bora, tipo da bora e a cor */
+    border-bottom: 1px solid var(--secondary-text-color);
+    border-right: 1px solid var(--secondary-text-color);
+  }
+  
+  #about-data .data:last-child {
+    border-top: 1px solid var(--secondary-text-color);
+    border-left: 1px solid var(--secondary-text-color);
+  }
+  
+  #about-data .data i {
+    background-color: transparent;
+    color: var(--main-color);
+    font-size: 4rem;
+    padding: 0;
+  }
+  
+  .data .number {
+    font-size: 4rem;
+    font-weight: 900;
+  }
+  
+  .data .text {
+    text-transform: uppercase;
+  }
+  
