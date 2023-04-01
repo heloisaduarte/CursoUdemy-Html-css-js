@@ -132,7 +132,7 @@ i{
 
 
 /* Áreas de atuação */
-.text-image-sections{
+.text-image-section{
     display: flex;
     /* Se a largura exceder do limite da tela uma div pra debaixo da outra  */
     flex-wrap: wrap;
@@ -179,3 +179,34 @@ i{
     position: absolute;
 }
 
+#other-services{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;   
+}
+.service{
+    position: relative;
+}
+
+.service i{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.service-info{
+    background-color: var(--tertiary-color);
+    padding: 2rem 1.4rem;
+    min-height: 250px;
+    margin-top: -3rem;
+    z-index: 2;
+    position: relative;
+}
+
+.service h4{
+    font-size:  1.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
